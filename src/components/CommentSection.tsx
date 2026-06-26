@@ -148,7 +148,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
             placeholder="Join the discussion... Share your thoughts!"
             value={newCommentContent}
             onChange={(e) => setNewCommentContent(e.target.value)}
-            className="w-full p-3 text-xs border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-slate-50/30 dark:bg-slate-950/30 text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-650"
+            className="w-full p-3 text-xs border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-slate-50/30 dark:bg-slate-950/30 text-slate-700 dark:text-slate-200 placeholder-slate-400 dark:placeholder-slate-500"
             required
             id="comment-textarea-root"
           />
@@ -180,7 +180,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
           <div className="h-10 bg-slate-100 dark:bg-slate-800 rounded-lg animate-pulse w-1/2 pl-6"></div>
         </div>
       ) : comments.length === 0 ? (
-        <p className="text-slate-400 dark:text-slate-550 text-xs text-center py-6 italic">
+        <p className="text-slate-400 dark:text-slate-500 text-xs text-center py-6 italic">
           No comments yet. Be the first to start the conversation!
         </p>
       ) : (
@@ -196,7 +196,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
                 <div className="bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100/80 dark:border-slate-800/80 shadow-sm hover:border-slate-200 dark:hover:border-slate-700 transition-colors">
                   <div className="flex justify-between items-start mb-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-600 dark:text-slate-350">
+                      <div className="w-7 h-7 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-[10px] text-slate-600 dark:text-slate-300">
                         {comment.authorName.charAt(0).toUpperCase()}
                       </div>
                       <div>
@@ -230,7 +230,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
                   <div className="flex items-center gap-4 mt-3 pl-1.5 text-[11px] font-medium text-slate-400 dark:text-slate-500 border-t border-slate-50 dark:border-slate-800 pt-2.5">
                     <button
                       onClick={() => handleLikeComment(comment.id)}
-                      className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-450 transition-colors"
+                      className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                       id={`like-comment-${comment.id}`}
                     >
                       <ThumbsUp size={12} />
@@ -242,7 +242,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
                         setReplyToId(comment.id);
                         setReplyContent('');
                       }}
-                      className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-450 transition-colors"
+                      className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                       id={`reply-trigger-${comment.id}`}
                     >
                       <Reply size={12} />
@@ -316,7 +316,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
                       <div className="flex-grow bg-slate-50/65 dark:bg-slate-950/40 p-3.5 rounded-xl border border-slate-100/50 dark:border-slate-800/50 hover:border-slate-100 dark:hover:border-slate-700 transition-colors">
                         <div className="flex justify-between items-start mb-1">
                           <div className="flex items-center gap-1.5">
-                            <div className="w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-[8px] text-slate-500 dark:text-slate-400">
+                            <div className="w-5 h-5 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-[8px] text-slate-500 dark:text-slate-400">
                               {reply.authorName.charAt(0).toUpperCase()}
                             </div>
                             <div>
@@ -348,7 +348,7 @@ export default function CommentSection({ postId, isAdmin = false }: CommentSecti
                         <div className="flex items-center gap-2 mt-2 pl-1 text-[10px] font-medium text-slate-400 dark:text-slate-500 border-t border-slate-50 dark:border-slate-800/80 pt-1.5">
                           <button
                             onClick={() => handleLikeComment(reply.id)}
-                            className="flex items-center gap-0.5 hover:text-emerald-600 dark:hover:text-emerald-450 transition-colors"
+                            className="flex items-center gap-0.5 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                             id={`like-reply-${reply.id}`}
                           >
                             <ThumbsUp size={10} />

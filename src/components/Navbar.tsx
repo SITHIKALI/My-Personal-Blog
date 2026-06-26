@@ -69,7 +69,7 @@ export default function Navbar({
               onClick={onNavigateToHome}
               className={`text-xs font-semibold px-3 py-1.5 rounded-lg transition-colors ${
                 !isDashboardActive
-                  ? 'text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-850'
+                  ? 'text-slate-950 dark:text-slate-100 bg-slate-100 dark:bg-slate-800'
                   : 'text-slate-500 dark:text-slate-400 hover:text-slate-950 dark:hover:text-slate-100 hover:bg-slate-50 dark:hover:bg-slate-800/50'
               }`}
               id="nav-home-link"

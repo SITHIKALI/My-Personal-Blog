@@ -140,7 +140,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
       </div>
 
       {error && (
-        <div className="mb-6 p-4 text-xs bg-rose-50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30 text-rose-600 dark:text-rose-450 rounded-xl">
+        <div className="mb-6 p-4 text-xs bg-rose-50 dark:bg-rose-950/20 border border-rose-100 dark:border-rose-900/30 text-rose-600 dark:text-rose-400 rounded-xl">
           {error}
         </div>
       )}
@@ -232,7 +232,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
                 <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider">
                   Article Body (Markdown)
                 </label>
-                <span className="text-[10px] text-slate-400 dark:text-slate-550 font-medium">
+                <span className="text-[10px] text-slate-400 dark:text-slate-500 font-medium">
                   Supports headers (#), lists (*), bold (**), code (`...`)
                 </span>
               </div>
@@ -252,7 +252,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
               {/* Category selector */}
               <div>
                 <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <Folder size={14} className="text-slate-450 dark:text-slate-500" />
+                  <Folder size={14} className="text-slate-400 dark:text-slate-500" />
                   Category
                 </label>
                 <select
@@ -272,7 +272,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
               {/* Tags comma input */}
               <div>
                 <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                  <Tag size={14} className="text-slate-450 dark:text-slate-500" />
+                  <Tag size={14} className="text-slate-400 dark:text-slate-500" />
                   Tags (Comma separated)
                 </label>
                 <input
@@ -280,7 +280,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
                   placeholder="e.g. Design, WebDev, CSS"
                   value={tagInput}
                   onChange={(e) => setTagInput(e.target.value)}
-                  className="w-full px-4 py-2.5 text-xs text-slate-750 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-white dark:bg-slate-900 shadow-sm transition-colors"
+                  className="w-full px-4 py-2.5 text-xs text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-white dark:bg-slate-900 shadow-sm transition-colors"
                   id="post-tags-input"
                 />
               </div>
@@ -289,7 +289,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
             {/* Cover Image Input */}
             <div>
               <label className="block text-xs font-semibold text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2 flex items-center gap-1.5">
-                <Image size={14} className="text-slate-450 dark:text-slate-500" />
+                <Image size={14} className="text-slate-400 dark:text-slate-500" />
                 Featured Cover Image URL
               </label>
               <input
@@ -297,7 +297,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
                 placeholder="https://images.unsplash.com/photo-..."
                 value={coverImage}
                 onChange={(e) => setCoverImage(e.target.value)}
-                className="w-full px-4 py-2.5 text-xs text-slate-755 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-white dark:bg-slate-900 shadow-sm transition-colors"
+                className="w-full px-4 py-2.5 text-xs text-slate-700 dark:text-slate-200 border border-slate-200 dark:border-slate-800 rounded-xl focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 bg-white dark:bg-slate-900 shadow-sm transition-colors"
                 id="post-cover-input"
               />
 
@@ -309,7 +309,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
                     key={item.name}
                     type="button"
                     onClick={() => setDemoCover(item.url)}
-                    className="text-[9px] font-bold px-2.5 py-1 bg-slate-50 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+                    className="text-[9px] font-bold px-2.5 py-1 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 rounded-md text-slate-600 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
                   >
                     {item.name} image
                   </button>
@@ -353,7 +353,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
                 <button
                   type="button"
                   onClick={onCancel}
-                  className="flex-grow sm:flex-none px-4 py-2 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-655 dark:text-slate-400 rounded-lg transition-colors"
+                  className="flex-grow sm:flex-none px-4 py-2 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg transition-colors"
                 >
                   Cancel
                 </button>
@@ -403,11 +403,11 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
               </div>
 
               {/* Dynamic Render block */}
-              <div className="prose prose-slate dark:prose-invert max-w-none text-slate-800 dark:text-slate-250">
+              <div className="prose prose-slate dark:prose-invert max-w-none text-slate-800 dark:text-slate-300">
                 {content ? (
                   renderMarkdown(content)
                 ) : (
-                  <p className="text-slate-400 dark:text-slate-550 text-xs italic">
+                  <p className="text-slate-400 dark:text-slate-500 text-xs italic">
                     Type some content in the writer tab to preview.
                   </p>
                 )}
@@ -418,7 +418,7 @@ export default function Dashboard({ editingPost, onSaveSuccess, onCancel }: Dash
               <button
                 type="button"
                 onClick={() => setActiveTab('edit')}
-                className="px-4 py-2 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-850 text-slate-600 dark:text-slate-400 rounded-lg transition-colors"
+                className="px-4 py-2 text-xs font-semibold border border-slate-200 dark:border-slate-800 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-400 rounded-lg transition-colors"
               >
                 Go Back to Writer
               </button>

@@ -224,7 +224,7 @@ function parseInlineMarkdown(text: string): React.ReactNode[] {
             href={sanitizeUrl(linkMatch[2])}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-305 underline font-medium transition-colors"
+            className="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 underline font-medium transition-colors"
           >
             {linkMatch[1]}
           </a>

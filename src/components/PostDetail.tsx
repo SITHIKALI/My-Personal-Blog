@@ -85,7 +85,7 @@ export default function PostDetail({ post, isAdmin = false, onBack }: PostDetail
           {post.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] font-semibold px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-350 rounded-full"
+              className="text-[10px] font-semibold px-2.5 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 rounded-full"
             >
               #{tag}
             </span>
@@ -100,7 +100,7 @@ export default function PostDetail({ post, isAdmin = false, onBack }: PostDetail
         {/* Author / Date Info line */}
         <div className="flex flex-wrap items-center justify-between gap-4 border-b border-slate-100 dark:border-slate-800/80 pb-6 mb-8 text-slate-500 dark:text-slate-400 font-medium">
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-850 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-xs text-slate-600 dark:text-slate-350 shadow-sm">
+            <div className="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 border border-slate-200 dark:border-slate-800 flex items-center justify-center font-bold text-xs text-slate-600 dark:text-slate-300 shadow-sm">
               {post.authorName ? post.authorName.charAt(0).toUpperCase() : 'A'}
             </div>
             <div>
@@ -180,7 +180,7 @@ export default function PostDetail({ post, isAdmin = false, onBack }: PostDetail
               }`}
             />
           </button>
-          <span className="text-slate-700 dark:text-slate-350 text-xs font-bold font-mono mt-2" id="claps-count-display">
+          <span className="text-slate-700 dark:text-slate-300 text-xs font-bold font-mono mt-2" id="claps-count-display">
             {claps} claps
           </span>
         </div>
