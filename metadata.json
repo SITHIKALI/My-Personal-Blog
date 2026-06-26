@@ -1,0 +1,6 @@
+{
+  "name": "My Personal Blog",
+  "description": "A clean, smooth, and lightweight personal blog showcasing insights, ideas, categories, and direct reader comments without sign-up clutter.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
